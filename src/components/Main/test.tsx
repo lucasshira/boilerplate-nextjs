@@ -4,13 +4,17 @@ import { Main } from './index'
 
 describe('<Main />', () => {
   it('should render the heading', () => {
-    render(<Main />)
+    render(<Main title="Default Title" description="Default description" />)
 
-    expect(screen.getByRole('heading', { name: /react/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /default title/i })
+    ).toBeInTheDocument()
   })
 
   it('should render the colors correctly', () => {
-    const { container } = render(<Main />)
+    const { container } = render(
+      <Main title="Default Title" description="Default description" />
+    )
 
     expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' })
   })

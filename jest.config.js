@@ -10,6 +10,7 @@ module.exports = {
     '!src/app/**', // this should be tested via e2e tests
     '!src/lib/registry.tsx', // this is a third-party library
     '!src/styles/**', // styles are not covered
+    '!src/**/stories.tsx', // stories are not covered
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: [
