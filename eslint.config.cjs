@@ -1,3 +1,6 @@
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from "eslint-plugin-storybook";
+
 const parserTs = require('@typescript-eslint/parser')
 const eslintPluginTs = require('@typescript-eslint/eslint-plugin')
 const pluginReact = require('eslint-plugin-react')

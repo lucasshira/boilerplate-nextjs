@@ -9,6 +9,7 @@ module.exports = {
     '!src/**/*.d.ts', 
     '!src/app/**', // this should be tested via e2e tests
     '!src/lib/registry.tsx', // this is a third-party library
+    '!src/styles/**', // styles are not covered
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: [
@@ -21,5 +22,9 @@ module.exports = {
         presets: ['next/babel']
       }
     ]
+  },
+  moduleNameMapper: {
+    '^styled-components':
+      'styled-components/dist/styled-components.browser.cjs.js',
   }
 }
