@@ -4,7 +4,12 @@ module.exports = {
     '/node_modules/',
     '/next/'],
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{js,ts,jsx,tsx}'],
+  collectCoverageFrom: [
+    'src/**/*.{js,ts,jsx,tsx}', 
+    '!src/**/*.d.ts', 
+    '!src/app/**', // this should be tested via e2e tests
+    '!src/lib/registry.tsx', // this is a third-party library
+  ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: [
     '<rootDir>/src',
